@@ -46,7 +46,7 @@
           @click="TareaHecho(tarea.id)"
           :class="{ 'light-blue lighten-4': tarea.hecho }"
         >
-          <template v-slot>
+          <template v-slot:default>
             <v-list-item-action>
               <v-checkbox
                 :input-value="tarea.hecho" color="primary"
@@ -59,23 +59,17 @@
               >{{ tarea.titulo }}</v-list-item-title>
             </v-list-item-content>
 
-            <v-list-item-action>
-              
-              <v-btn
-                icon
-                @click.stop="iniciarEdicion(tarea)"
-              >
+            <v-list-item-action class="d-flex flex-row align-center">
+              <v-btn icon class="mr-1" @click.stop="iniciarEdicion(tarea)">
                 <v-icon color="primary lighten-1">mdi-pencil</v-icon>
               </v-btn>
-              <v-btn
-                icon
-                @click.stop="BorrarTarea(tarea.id)"
-              >
+              <v-btn icon @click.stop="BorrarTarea(tarea.id)">
                 <v-icon color="red lighten-1">mdi-delete</v-icon>
               </v-btn>
             </v-list-item-action>
           </template>
         </v-list-item>
+        <v-divider></v-divider>
       </div>
     </v-list>
   </div>
@@ -285,5 +279,10 @@ export default {
 */
 .blue {
   background-color: #E3F2FD; /* Un azul pálido de Vuetify */
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.v-list-item__action {
+  min-width: auto !important;
 }
 </style>
