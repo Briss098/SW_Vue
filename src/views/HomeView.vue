@@ -119,7 +119,6 @@ export default {
 
   methods: {
     /**
-     * LEER (Read)
      * Se conecta a Firestore y escucha cambios en tiempo real.
      */
     obtenerTareas() {
@@ -272,16 +271,11 @@ export default {
 </script>
 
 <style scoped>
-/* Añadimos el estilo para la clase '.blue' que usa
-  el v-list-item cuando 'tarea.hecho' es true.
-  'scoped' significa que este estilo solo aplica a 
-  este componente.
-*/
+
 .blue {
   background-color: #E3F2FD; /* Un azul pálido de Vuetify */
 }
 
-/* Estilos adicionales para mejorar la apariencia */
 .v-list-item__action {
   min-width: auto !important;
 }
