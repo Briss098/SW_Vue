@@ -38,7 +38,12 @@
 
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title > <h5>22680316 Vivas Morales Britany Yazaret</h5></v-toolbar-title>
+      <v-toolbar-title>
+        <!-- Versión completa en pantallas grandes -->
+        <span class="d-none d-sm-flex">22680316 Vivas Morales Britany Yazaret</span>
+        <!-- Versión abreviada en pantallas pequeñas -->
+        <span class="d-flex d-sm-none">22680316 B. Vivas</span>
+      </v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -52,13 +57,11 @@
     data () {
       return {
         drawer: null,
-        right: null,
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
           { title: 'Photos', icon: 'mdi-image', to: '/photos' },
           { title: 'About', icon: 'mdi-help-box', to: '/about' },
         ],
-        right: null,
       }
     },
   }
