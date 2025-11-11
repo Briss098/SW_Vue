@@ -39,10 +39,9 @@
     <v-app-bar app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>
-        <!-- Versión completa en pantallas grandes -->
         <span class="d-none d-sm-flex">22680316 Vivas Morales Britany Yazaret</span>
-        <!-- Versión abreviada en pantallas pequeñas -->
-        <span class="d-flex d-sm-none">22680316 B. Vivas</span>
+        <!-- Versión abreviada del nombre -->
+        <span class="d-flex d-sm-none">22680316 Britany Morales</span>
       </v-toolbar-title>
     </v-app-bar>
 
